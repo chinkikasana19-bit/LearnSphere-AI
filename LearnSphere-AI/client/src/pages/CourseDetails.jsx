@@ -208,7 +208,7 @@ export default function CourseDetails() {
                 {lesson.content && <p>{lesson.content}</p>}
                 {lesson.pdfPath && (
                   <a
-                    href={`http://localhost:5000${lesson.pdfPath}`}
+                  href={`${import.meta.env.VITE_API_URL.replace("/api","")}${lesson.pdfPath}`}
                     target="_blank"
                     rel="noreferrer"
                   >
